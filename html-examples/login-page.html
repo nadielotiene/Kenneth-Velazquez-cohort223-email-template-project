@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="https://art.pixilart.com/34195bc304a46e6.png">
     <style>
 
         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
+        
         body {
             margin: 0;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-family: Helvetica, Arial, sans-serif;
         }
 
-        #container {
+        .container {
             background: linear-gradient(300deg, #CCFFFF, #FFCCCC);
             width: 100vw;
             height: 100vh;
@@ -24,16 +24,20 @@
             align-items: center;
         }
 
-        #card {
+        .card {
             border-radius: 12px;
-            min-width: 50%;
-            min-height: 60%;
+            min-width: 50vw;
+            min-height: 60vh;
             background: #ffffff;
+            /* -webkit-appearance: box-shadow; */
             box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.20);
             opacity: 0.5;
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            /* border-style: groove;
+            border: 1px; */
             
         }
 
@@ -42,49 +46,67 @@
             font-family: 'Lobster', cursive;
             font-size: 42px;
             color: #BFC5FF;
-            opacity: 1;
         }
 
         input, label {
             width: 80%;
             height: 30%;
-            font-size: larger;
+            font-size: 1.2rem;
             box-sizing: border-box;
             border-radius: 8px;
             opacity: 1;
-            margin: 5px;
+            margin: 0.3rem;
             padding: 12px;
-            border: 0;
+            /* border-color: #BFC5FF; */
         }
 
         .box-shadow {
+            /* -webkit-appearance: box-shadow; */
             box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.5);
         }
 
         input[type=submit] {
             font-weight: 800;
             margin-top: 50px;
+            margin-bottom: 50px;
+            background-color: #d6cbcb;
             color: #000000;
         }
 
         input[type=submit]:hover {
-            background-color: #eafafa;
-            color: #fc8c8c;
+            background-color: #BFC5FF;
+            color: #ffffff;
         }
+
+        input[type=submit]:active {
+            background-color: #AEA2E8;
+            color: #CCCCCC;
+        }
+
+        /* .checkbox {
+            font-size: 0.8rem;
+            margin: 10px;
+            color:rgb(88, 86, 88);
+            display: flex;
+            align-items:flex-start;
+        } */
 
     </style>
 </head>
 <body>
-    <div id="container">
-        <div id="card">
+    <div class="container">
+        <div class="card">
             <h2>login</h2>
-            <label for="email">email</label>
+            <label for="email"><img class="envelope" src="https://cdn-icons.flaticon.com/png/512/2907/premium/2907765.png?token=exp=1649315815~hmac=2cbcff8d8e27665aed6b660bd316c429" width="16px" height="16px" alt="envelope-img"> email</label>
             <input class="box-shadow" type="email" id="email" placeholder="Enter your email" required="required" name="email">
-            <label for="password">password</label>
+
+            <label for="password"><img class="key" src="https://cdn-icons.flaticon.com/png/512/807/premium/807369.png?token=exp=1649312555~hmac=b6848d65dd0aec381e5e99ddc9b3086d" width="16px" height="16px" alt="key-img"> password</label>
             <input class="box-shadow" type="password" id="password" placeholder="Enter your password" required="required" name="password">
-            <input class="box-shadow" type="submit" id="submit" name="submit">
-            <input type="checkbox" id="checkbox" name="checkbox">
-            <label for="checkbox"> remember me?</label>
+
+            <input class="box-shadow" type="submit" id="submito" name="submit">
+
+            <!-- <input class="checkbox" type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+            <label class="checkbox" for="checkbox"> remember me</label> -->
         </div>
     </div>
 </body>
